@@ -10,7 +10,7 @@ class RomanNumeralsConverterTest {
     @Test
     void returnsI_whenGiven1(){
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();
-        Assertions.assertEquals(rnc.convertOneToRomanNumerals(1),"I");
+        Assertions.assertEquals(rnc.convertToRomanNumerals(1),"I");
     }
 
     @Test
@@ -19,5 +19,10 @@ class RomanNumeralsConverterTest {
         assertEquals(rnc.convertTwoToRomanNumerals(2), "II");
 
     }
+
+    @Test
+    void returnsIII_whenGiven3(){
+        RomanNumeralsConverter rnc = new RomanNumeralsConverter();
+        assertEquals(rnc.convertToRomanNumerals(3), "III");    }
 
 }
