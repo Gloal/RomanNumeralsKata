@@ -20,7 +20,13 @@ class RomanNumeralsConverterTest {
             "5, V",
             "6, VI",
             "8, VIII",
-            "9, IX"
+            "9, IX",
+            "10, X",
+            "20, XX",
+            "30, XXX",
+            "33, XXXIII"
+
+
     })
     void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();

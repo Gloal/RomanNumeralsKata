@@ -6,31 +6,35 @@ public class RomanNumeralsConverter {
         StringBuilder result = new StringBuilder();
 
         if (num <= 3) {
-            for (int i = 0; i < num; i++) {
-                result.append("I");
-
-            }
+            result.append("I".repeat(Math.max(0, num)));
             return String.valueOf(result);
         }
 
         if (num == 4) {
-            return "IV";
+            return String.valueOf(result.append("IV"));
         }
 
         if(num == 5){
-            return "V";
+            return String.valueOf(result.append("V"));
         }
 
-        if(num > 5){
+        if(num > 5 && num < 10){
             String prefix = convertToRomanNumerals(5);
             int remainder = num % 5;
             if (remainder == 4){
-                return "IX";
+                return String.valueOf(result.append("IX"));
 
             }
             String suffix = convertToRomanNumerals(num % 5);
             return prefix+suffix;
         }
-        return null;
+
+        if(num >=10){
+            result.append("X".repeat(Math.max(0, num/10)));
+            int remainder = num % 10;
+            String suffix = convertToRomanNumerals(remainder);
+            return String.valueOf(result.append(suffix));
+        }
+        return String.valueOf(result);
     }
 }
