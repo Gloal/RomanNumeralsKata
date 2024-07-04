@@ -15,7 +15,8 @@ class RomanNumeralsConverterTest {
     @CsvSource({
             "1, I",
             "2, II",
-            "3, III"
+            "3, III",
+            "4 , IV",
     })
     void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();

@@ -2,13 +2,20 @@ package com.example.romannumeralskatatdd;
 
 public class RomanNumeralsConverter {
 
-    public String convertToRomanNumerals(int num){
+    public String convertToRomanNumerals(int num) {
         StringBuilder result = new StringBuilder();
-        for(int i=0; i < num; i++){
-            result.append("I");
 
+        if (num <= 3) {
+            for (int i = 0; i < num; i++) {
+                result.append("I");
+
+            }
+            return String.valueOf(result);
         }
-        return result.toString();
-    }
 
+        if (num == 4) {
+            return "IV";
+        }
+        return null;
+    }
 }
