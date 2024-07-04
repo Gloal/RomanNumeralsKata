@@ -17,6 +17,9 @@ class RomanNumeralsConverterTest {
             "2, II",
             "3, III",
             "4 , IV",
+            "5, V",
+            "6, VI",
+            "8, VIII"
     })
     void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();

@@ -16,6 +16,16 @@ public class RomanNumeralsConverter {
         if (num == 4) {
             return "IV";
         }
+
+        if(num == 5){
+            return "V";
+        }
+
+        if(num > 5){
+            String prefix = convertToRomanNumerals(5);
+            String suffix = convertToRomanNumerals(num % 5);
+            return prefix+suffix;
+        }
         return null;
     }
 }
