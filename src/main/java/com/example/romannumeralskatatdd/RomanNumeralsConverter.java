@@ -11,7 +11,4 @@ public class RomanNumeralsConverter {
         return result.toString();
     }
 
-    public String convertTwoToRomanNumerals(int num){
-        return "II";
-    }
 }
