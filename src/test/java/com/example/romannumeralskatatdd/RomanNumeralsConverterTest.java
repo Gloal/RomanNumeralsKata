@@ -16,7 +16,7 @@ class RomanNumeralsConverterTest {
     @Test
     void returnsII_whenGiven2(){
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();
-        assertEquals(rnc.convertTwoToRomanNumerals(2), "II");
+        assertEquals(rnc.convertToRomanNumerals(2), "II");
 
     }
 
