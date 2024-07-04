@@ -1,28 +1,27 @@
 package com.example.romannumeralskatatdd;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsConverterTest {
-
-    @Test
-    void returnsI_whenGiven1(){
+    @ParameterizedTest
+    @CsvSource({
+            "1, I",
+            "2, II",
+            "3, III"
+    })
+    void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
         RomanNumeralsConverter rnc = new RomanNumeralsConverter();
-        Assertions.assertEquals(rnc.convertToRomanNumerals(1),"I");
+        String actualValue = rnc.convertToRomanNumerals(input);
+        assertEquals(expected, actualValue);
     }
 
-    @Test
-    void returnsII_whenGiven2(){
-        RomanNumeralsConverter rnc = new RomanNumeralsConverter();
-        assertEquals(rnc.convertToRomanNumerals(2), "II");
-
-    }
-
-    @Test
-    void returnsIII_whenGiven3(){
-        RomanNumeralsConverter rnc = new RomanNumeralsConverter();
-        assertEquals(rnc.convertToRomanNumerals(3), "III");    }
 
 }
