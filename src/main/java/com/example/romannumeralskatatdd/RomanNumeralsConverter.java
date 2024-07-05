@@ -1,9 +1,6 @@
 package com.example.romannumeralskatatdd;
 
-import java.util.SortedMap;
 import java.util.TreeMap;
-
-import static java.util.Map.entry;
 
 public class RomanNumeralsConverter {
 
@@ -19,7 +16,10 @@ public class RomanNumeralsConverter {
         romanConverter.put(50, "L");
         romanConverter.put(90, "XC");
         romanConverter.put(100, "C");
-
+        romanConverter.put(400, "CD");
+        romanConverter.put(500, "D");
+        romanConverter.put(900, "CM");
+        romanConverter.put(1000, "M");
     }
 
 
