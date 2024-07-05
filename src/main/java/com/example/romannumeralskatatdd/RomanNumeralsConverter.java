@@ -18,6 +18,7 @@ public class RomanNumeralsConverter {
         romanConverter.put(40, "XL");
         romanConverter.put(50, "L");
         romanConverter.put(90, "XC");
+        romanConverter.put(100, "C");
 
     }
 

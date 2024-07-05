@@ -36,7 +36,9 @@ class RomanNumeralsConverterTest {
             "50, L",
             "60, LX",
             "69, LXIX",
-            "95, XCV"
+            "95, XCV",
+            "132, CXXXII",
+            "350, CCCL"
 
 
     })
