@@ -39,9 +39,8 @@ class RomanNumeralsConverterTest {
             "410, CDX",
             "560, DLX",
             "900, CM",
-            "1200, MCC"
-
-
+            "1200, MCC",
+            "2024, MMXXIV"
     })
     void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
         String actualValue = rnc.convertToRomanNumerals(input);
