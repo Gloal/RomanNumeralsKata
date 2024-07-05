@@ -1,6 +1,7 @@
 package com.example.romannumeralskatatdd;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -11,6 +12,12 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsConverterTest {
+
+    private RomanNumeralsConverter rnc;
+    @BeforeEach
+    void setUp(){
+        rnc = new RomanNumeralsConverter();
+    }
     @ParameterizedTest
     @CsvSource({
             "1, I",
@@ -24,12 +31,12 @@ class RomanNumeralsConverterTest {
             "10, X",
             "20, XX",
             "30, XXX",
-            "33, XXXIII"
+            "33, XXXIII",
+            "40, XL"
 
 
     })
     void convertToRomanNumerals_ShouldReturnTheExpectedNumeralStrings(int input, String expected) {
-        RomanNumeralsConverter rnc = new RomanNumeralsConverter();
         String actualValue = rnc.convertToRomanNumerals(input);
         assertEquals(expected, actualValue);
     }
