@@ -32,7 +32,11 @@ class RomanNumeralsConverterTest {
             "20, XX",
             "30, XXX",
             "33, XXXIII",
-            "40, XL"
+            "40, XL",
+            "50, L",
+            "60, LX",
+            "69, LXIX",
+            "95, XCV"
 
 
     })
